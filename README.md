@@ -1,55 +1,56 @@
-# 🤖 Hackea la IA
+# ⚡ Hackea la IA – Landing Page
 
-![Hackea la IA Banner](./public/images/banner-hackea.png)
+Bienvenido/a a **Hackea la IA**, un espacio creado con ❤️ y propósito para quienes desean aprovechar el poder de la inteligencia artificial en su día a día creativo, profesional y estratégico.
 
-Hackea la IA es un proyecto personal enfocado en compartir herramientas, prompts y estrategias para que cualquier persona —sin importar su nivel técnico— pueda aprovechar la Inteligencia Artificial de forma creativa, productiva y humana.
-
-> "No se trata de que la IA piense por ti, sino de que piense contigo."
+Diseñado para impactar, emocionar y conectar con personas que buscan herramientas que realmente funcionen.
 
 ---
 
-## 🚀 ¿Qué es?
+## 🌐 Demo en línea
 
-Una **landing page** visual y emocional que centraliza todos los recursos, guías y accesos directos creados por [Lucas Salazar](https://github.com/lucassalazar93), combinando:
+👉 [Ver sitio desplegado en Vercel](https://hackea-la-ia.vercel.app)
 
-- Prompts semanales gratuitos 🧠
-- Acceso a proyectos y herramientas con IA
-- Calendario de demos y mentorías
-- Recursos descargables
-- Vínculos a redes sociales y contenido educativo
+---
+
+## 🎯 ¿Qué es Hackea la IA?
+
+Un proyecto personal que mezcla:
+- Diseño emocional 💡
+- Tecnología moderna ⚙️
+- Automatización con IA 🤖
+- Estrategia de marketing digital 🔥
+
+Una **landing page** que presenta recursos, ofertas, testimonios y herramientas para ayudarte a dominar la IA sin complicaciones.
 
 ---
 
 ## 🛠️ Tecnologías usadas
 
-- [Vite.js](https://vitejs.dev/) — Framework ultrarrápido
-- [React](https://reactjs.org/)
-- [Swiper.js](https://swiperjs.com/) — Carruseles modernos
-- [Remix Icons](https://remixicon.com/) — Íconos limpios
-- [CSS personalizado](./src/styles/global.css) con variables, neon, y glassmorphism
-
----
-
-## 📸 Capturas
-
-| Mobile View 📱 | Desktop View 💻 |
-|----------------|----------------|
-| ![](./public/images/screenshot-mobile.png) | ![](./public/images/screenshot-desktop.png) |
+- [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- CSS personalizado (modo oscuro + efectos neon)
+- Responsive design (mobile-first)
+- Swiper.js para galería
+- Vercel para el despliegue
 
 ---
 
 ## 📂 Estructura del proyecto
 
 ```bash
-hackea-la-ia/
-├── public/
-│   └── images/
-├── src/
-│   ├── components/
-│   ├── assets/
-│   ├── styles/
-│   └── main.jsx
-├── index.html
-├── vite.config.js
-├── package.json
-└── README.md
+src/
+├── components/
+│   ├── Hero.jsx
+│   ├── Footer.jsx
+│   ├── Microprueba.jsx
+│   ├── OfertaAnticipada.jsx
+│   ├── SeccionTestimonioAutor.jsx
+│   └── ...
+├── styles/
+│   └── global.css
+├── App.jsx
+└── main.jsx
+
+public/
+└── (Imágenes, íconos, recursos estáticos)
+
+
