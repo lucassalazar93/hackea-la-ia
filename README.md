@@ -1,12 +1,55 @@
-# React + Vite
+# 🤖 Hackea la IA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Hackea la IA Banner](./public/images/banner-hackea.png)
 
-Currently, two official plugins are available:
+Hackea la IA es un proyecto personal enfocado en compartir herramientas, prompts y estrategias para que cualquier persona —sin importar su nivel técnico— pueda aprovechar la Inteligencia Artificial de forma creativa, productiva y humana.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> "No se trata de que la IA piense por ti, sino de que piense contigo."
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 ¿Qué es?
+
+Una **landing page** visual y emocional que centraliza todos los recursos, guías y accesos directos creados por [Lucas Salazar](https://github.com/lucassalazar93), combinando:
+
+- Prompts semanales gratuitos 🧠
+- Acceso a proyectos y herramientas con IA
+- Calendario de demos y mentorías
+- Recursos descargables
+- Vínculos a redes sociales y contenido educativo
+
+---
+
+## 🛠️ Tecnologías usadas
+
+- [Vite.js](https://vitejs.dev/) — Framework ultrarrápido
+- [React](https://reactjs.org/)
+- [Swiper.js](https://swiperjs.com/) — Carruseles modernos
+- [Remix Icons](https://remixicon.com/) — Íconos limpios
+- [CSS personalizado](./src/styles/global.css) con variables, neon, y glassmorphism
+
+---
+
+## 📸 Capturas
+
+| Mobile View 📱 | Desktop View 💻 |
+|----------------|----------------|
+| ![](./public/images/screenshot-mobile.png) | ![](./public/images/screenshot-desktop.png) |
+
+---
+
+## 📂 Estructura del proyecto
+
+```bash
+hackea-la-ia/
+├── public/
+│   └── images/
+├── src/
+│   ├── components/
+│   ├── assets/
+│   ├── styles/
+│   └── main.jsx
+├── index.html
+├── vite.config.js
+├── package.json
+└── README.md
