@@ -1,0 +1,67 @@
+/* Contenedor principal */
+.ia-franja-container {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #0f0f0f, #111111);
+  border-top: 2px solid #facc15;
+  border-bottom: 2px solid #facc15;
+  padding: 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Wrapper con no-break para el scroll continuo */
+.ia-franja-wrapper {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/* Pista animada que se desplaza */
+.ia-franja-track {
+  display: inline-block;
+  animation: scrollFranja 95s linear infinite;
+}
+
+/* Ítem individual dentro de la franja */
+.ia-franja-item {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #facc15;
+  font-family: "Sora", sans-serif;
+  padding: 0 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(250, 204, 21, 0.5);
+}
+
+/* Efecto neón y fuerza de brillo */
+.ia-franja-item strong {
+  font-weight: 700;
+  color: #ffffffc7;
+  text-shadow: 0 0 5px #facc15dd, 0 0 10px #facc15ba;
+}
+
+/* Animación infinita y suave */
+@keyframes scrollFranja {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilos para enlaces dentro de la franja */
+.ia-franja-item a {
+  color: #facc15;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ia-franja-item a:hover {
+  color: #ff5e00;
+  text-decoration: underline;
+  text-shadow: 0 0 10px #ff5e00;
+}

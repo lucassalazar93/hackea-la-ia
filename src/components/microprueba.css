@@ -1,0 +1,99 @@
+.microprueba {
+  background: #0d0d0d; /* fondo oscuro como el hero */
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  color: #ffffff;
+}
+
+.microprueba .contenedor {
+  max-width: 880px;
+  margin: auto;
+}
+
+.microprueba h2 {
+  font-size: 2.2rem;
+  color: #f8d630;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.microprueba .subtexto {
+  color: #ffffffcc;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.tarjeta-prompt {
+  background: #141414;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #2f2f2f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.tarjeta-prompt h3 {
+  color: #f8d630;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.texto-prompt {
+  font-size: 1rem;
+  color: #ffffffcc;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  background: #c97a32;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.btn-ver-mas:hover {
+  background: #e68c44;
+}
+
+.testimonio {
+  font-style: italic;
+  color: #ffebd5;
+  background: #2a1b10;
+  border-left: 4px solid #c97a32;
+  padding: 1.25rem 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.testimonio span {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: #f8d630;
+  font-size: 0.9rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .tarjeta-prompt,
+  .testimonio {
+    text-align: center;
+  }
+
+  .texto-prompt {
+    text-align: left;
+  }
+
+  .btn-ver-mas {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
