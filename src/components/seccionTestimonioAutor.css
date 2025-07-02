@@ -42,7 +42,6 @@
   transition: box-shadow 0.3s;
 }
 
-/* texto principal de la cita */
 .cita-texto {
   font-size: 1.15rem;
   line-height: 1.65;
@@ -62,7 +61,6 @@
   color: #d4d4d4;
 }
 
-/* barra progreso */
 .barra-24h,
 .barra-tiempo {
   background: rgba(255, 255, 255, 0.1);
@@ -80,7 +78,6 @@
   transition: width 0.2s linear;
 }
 
-/* badge validado */
 .validado-badge {
   position: absolute;
   right: 20px;
@@ -95,11 +92,11 @@
   cursor: default;
 }
 
-/* glow / pulse */
 .glow-pulse {
   box-shadow: 0 0 10px var(--amarillo);
   animation: pulseBadge 2s infinite;
 }
+
 @keyframes pulseBadge {
   0%,
   100% {
@@ -129,6 +126,7 @@
   animation: cardGlow 6s ease-in-out infinite;
   box-shadow: 0 0 40px rgba(255, 94, 0, 0.18);
 }
+
 @keyframes cardGlow {
   0%,
   100% {
@@ -149,19 +147,18 @@
   margin-bottom: 1.4rem;
   transition: transform 0.3s;
 }
+
 .avatar-lukas:hover {
   transform: scale(1.05);
   box-shadow: 0 0 22px var(--naranja);
 }
 
-/* tooltip lib styles override */
 .__react_component_tooltip {
   font-size: 0.8rem !important;
   max-width: 220px !important;
   border-radius: 8px !important;
 }
 
-/* micro-título */
 .micro-title {
   font-size: 0.78rem;
   font-weight: 600;
@@ -179,11 +176,11 @@
   margin-bottom: 1rem;
 }
 
-/* underline + glow al pasar */
 .hover-underline-glow {
   position: relative;
   cursor: pointer;
 }
+
 .hover-underline-glow::after {
   content: "";
   position: absolute;
@@ -196,14 +193,15 @@
   transform-origin: left;
   transition: transform 0.3s;
 }
+
 .hover-underline-glow:hover::after {
   transform: scaleX(1);
 }
+
 .hover-underline-glow:hover {
   text-shadow: 0 0 8px var(--amarillo);
 }
 
-/* listado de bullets */
 .autor-bullets {
   list-style: none;
   padding: 0;
@@ -212,33 +210,31 @@
   color: #eee;
   text-align: left;
 }
+
 .autor-bullets li {
   margin: 0.45rem 0;
   font-size: 1.05rem;
 }
 
-/* contador resaltado */
 .contador-resaltado {
   color: #ffddb0;
   font-weight: 700;
 }
 
-/* CTA link */
 .autor-siguiendo {
   margin-top: 1rem;
 }
+
 .autor-siguiendo a {
   text-decoration: none;
 }
 
-/* microcopy final */
 .autor-microcopy {
   font-size: 0.92rem;
   margin-top: 1.3rem;
   color: #ccc;
 }
 
-/* firma */
 .firma-lukas {
   width: 160px;
   margin: 1.5rem auto 0;
@@ -246,33 +242,56 @@
   opacity: 0.9;
 }
 
-/* ------------------------------
-   RESPONSIVE tweaks
---------------------------------*/
-@media (max-width: 600px) {
-  .testimonio-flash {
-    flex-direction: column;
-    text-align: center;
-  }
-  .validado-badge {
-    position: static;
-    margin: 1rem auto 0;
-  }
-  .cita-texto {
-    font-size: 1rem;
-  }
-  .autor-bullets {
-    text-align: center;
-  }
-}
-
-/* estilo del CTA final extra */
 .autor-cta-extra {
   margin-top: 0.6rem;
   font-size: 1.02rem;
   color: var(--amarillo);
   text-shadow: 0 0 8px rgba(250, 204, 21, 0.25);
 }
+
 .autor-cta-extra strong {
   color: var(--naranja);
+}
+
+/* ------------------------------
+   RESPONSIVE tweaks
+--------------------------------*/
+@media (max-width: 768px) {
+  .testimonio-flash {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  .cita-texto {
+    font-size: 1rem;
+  }
+  .avatar-lukas {
+    width: 100px;
+    height: 100px;
+  }
+  .autor-nombre {
+    font-size: 1.4rem;
+  }
+  .autor-bullets {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .firma-lukas {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonio-flash {
+    padding: 1.6rem 1rem;
+  }
+  .avatar-laura,
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .validado-badge {
+    position: static;
+    margin-top: 1rem;
+  }
 }

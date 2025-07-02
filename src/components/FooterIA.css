@@ -1,0 +1,115 @@
+.footer-ia {
+  background-color: #0c0c0c;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #ffffffcc;
+  font-family: "Sora", sans-serif;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-contenido {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-frase {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #f8d630;
+  line-height: 1.4;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1a1a1a;
+  color: #f8d630;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.footer-btn:hover {
+  background-color: #f8d630;
+  color: #0c0c0c;
+}
+
+/* === Colores originales de íconos === */
+.footer-btn.instagram .icono-red {
+  color: #e1306c;
+}
+
+.footer-btn.whatsapp .icono-red {
+  color: #25d366;
+}
+
+.icono-red {
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+}
+
+.footer-btn:hover .icono-red {
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .footer-frase {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .footer-redes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-frase {
+    font-size: 0.95rem;
+  }
+
+  .footer-btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .icono-red {
+    font-size: 1.2rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+  }
+}

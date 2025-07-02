@@ -1,12 +1,16 @@
 /* === SECCIÓN HERO (contenedor principal) === */
 .hero-pro {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  background: #030808;
   background-color: #050c0c;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 8rem; /* ⬅️ Se agregó padding-bottom para dar espacio a IAFranja */
   color: #ffffff;
   display: flex;
-  justify-content: flex-start; /* Alineado a la izquierda */
+  justify-content: flex-start;
   align-items: center;
-  text-align: left; /* Alineación izquierda del texto */
+  min-height: 90vh;
 }
 
 /* === CONTENEDOR DEL TEXTO === */
@@ -18,7 +22,7 @@
 
 /* === TÍTULO PRINCIPAL === */
 .hero-texto-solo h1 {
-  font-size: clamp(5rem, 14vw, 10rem);
+  font-size: clamp(8rem, 15vw, 10rem);
   font-family: "Sora", sans-serif;
   color: #f8d630;
   text-transform: uppercase;
@@ -29,19 +33,18 @@
   line-height: 1;
 }
 
-/* === SPAN dentro del título (DOMINA) === */
 .hero-texto-solo h1 span {
   display: inline-block;
   margin-right: 0.3rem;
 }
 
-/* === SUBTÍTULO (EN 24 HORAS) === */
+/* === SUBTÍTULO === */
 .hero-texto-solo h2 {
-  font-size: clamp(3rem, 6vw, 4rem); /* ✅ Más grande */
-  font-weight: 800; /* Un poco más grueso para que impacte */
-  margin-top: -1rem; /* ✅ Menos espacio con el título */
-  margin-bottom: 1.5rem; /* Un poco menos espacio inferior */
-  margin-left: 9rem; /* Mantiene desplazamiento hacia la derecha */
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-top: -2.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 9rem;
   color: #ffffff;
 }
 
@@ -49,7 +52,7 @@
 .hero-texto-solo p {
   font-size: 1rem;
   color: #ffffffcc;
-  margin-top: 9rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   line-height: 1.4;
   max-width: 480px;
@@ -57,7 +60,7 @@
   margin-left: auto;
   margin-right: auto;
   word-break: break-word;
-  transform: translateX(-180px); /* más a la izquierda */
+  transform: translateX(-180px);
 }
 
 /* === BOTÓN CTA === */
@@ -71,58 +74,25 @@
   font-size: 1rem;
   display: inline-block;
   transition: all 0.3s ease;
-  margin-left: 17rem; /* ajusta este valor según lo que necesites */
+  margin-left: 17rem;
 }
 
-/* === EFECTO HOVER === */
 .cta-principal:hover {
   background-color: #f8d630;
   color: #050c0c;
 }
 
-/* === FLECHA → === */
 .flecha {
   margin-left: 0.5rem;
 }
 
-/* === RESPONSIVE: opcional para móviles === */
-@media (max-width: 768px) {
-  .hero-pro {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 4rem 1.5rem;
-  }
-
-  .hero-texto-solo {
-    max-width: 100%;
-    text-align: left;
-  }
-
-  .hero-texto-solo p {
-    max-width: 100%;
-  }
-}
-
-/* === imagen=== */
-.hero-pro {
-  position: relative;
-  background-color: #050c0c;
-  padding: 6rem 2rem;
-  color: #ffffff;
-  display: flex;
-  justify-content: flex-start; /* alinear el contenido al inicio */
-  align-items: center;
-  min-height: 90vh;
-  overflow: visible; /* 👈 Permite que la imagen sobresalga sin cortarse */
-}
-
-/* Imagen flotante sobrepuesta */
+/* === Imagen flotante === */
 .hero-img-sobrepuesta {
   position: absolute;
   top: 26%;
   right: -3rem;
   transform: translateY(-50%);
-  width: 750px; /* o ajusta según tamaño original */
+  width: 750px;
   max-width: 40vw;
   z-index: 2;
   pointer-events: none;
@@ -130,26 +100,13 @@
   border-radius: 10px;
 }
 
-/* Ajuste en móvil para que se reubique */
-@media (max-width: 768px) {
-  .hero-img-sobrepuesta {
-    position: static;
-    width: 70%;
-    max-width: 90vw;
-    margin: 2rem auto 0;
-    transform: none;
-    display: block;
-  }
-}
-
-/*-- formulario --*/
-
+/* === FORMULARIO LEAD === */
 .formulario-lead {
   display: flex;
   flex-direction: column;
   gap: 1px;
   max-width: 400px;
-  margin: 2rem auto 0;
+  margin: 1rem auto 0;
   transform: translateX(-180px);
 }
 
@@ -177,12 +134,12 @@
 }
 
 .formulario-lead small {
-  font: size 12px;
+  font-size: 12px;
   color: #999;
   text-align: center;
 }
 
-/* ===== Modal de éxito ===== */
+/* === Modal de éxito === */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -190,7 +147,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999; /* por encima de todo */
+  z-index: 9999;
 }
 
 .modal-box {
@@ -228,4 +185,153 @@
 
 .modal-btn:hover {
   background: #e68c44;
+}
+
+/* === Fondo animado === */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/fondo-hero.svg") center/cover no-repeat;
+  filter: blur(3px) saturate(130%);
+  opacity: 0.15;
+  transform: scale(1.05);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, transparent 20%, #000 80%);
+  opacity: 0.4;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-pro {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: rem 1.5rem 6rem; /* ⬅️ se mantiene el espacio inferior */
+  }
+
+  .hero-texto-solo {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .hero-texto-solo p {
+    max-width: 100%;
+    transform: none;
+  }
+
+  .cta-principal {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .hero-img-sobrepuesta {
+    position: static;
+    width: 70%;
+    max-width: 90vw;
+    margin: 2rem auto 0;
+    transform: none;
+    display: block;
+  }
+
+  .formulario-lead {
+    transform: none;
+  }
+}
+@media (max-width: 1024px) {
+  .hero-pro {
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  .hero-img-sobrepuesta {
+    position: static;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto 2rem;
+    transform: none;
+    display: block;
+    z-index: 1;
+  }
+
+  .hero-texto-solo {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-texto-solo h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-texto-solo p {
+    max-width: 100%;
+    transform: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-principal {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .formulario-lead {
+    transform: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img-sobrepuesta {
+    max-width: 240px;
+  }
+
+  .hero-texto-solo h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-texto-solo h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-principal {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .formulario-lead input,
+  .formulario-lead button {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 1024px) {
+  .hero-texto-solo h2 {
+    margin-top: 1rem; /* ✅ Reemplaza el margen negativo */
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero-texto-solo h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+  }
+
+  .hero-texto-solo h2 {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
 }

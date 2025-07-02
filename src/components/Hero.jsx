@@ -27,7 +27,7 @@ export default function Hero() {
     setError(null);
 
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY) // ✅ AÑADIDO PUBLIC_KEY
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
       .then(() => {
         setShowOk(true);
         formRef.current.reset();
@@ -42,43 +42,50 @@ export default function Hero() {
 
   return (
     <section className="hero-pro" id="inicio">
-      <img
-        src={heroImg}
-        alt="Lukas IA coach"
-        className="hero-img-sobrepuesta"
-      />
+      {/* Fondo difuminado */}
+      <div className="hero-bg" aria-hidden="true"></div>
 
-      <div className="hero-texto-solo">
-        <h1>
-          <span>DOMINA</span> LA IA
-        </h1>
-        <h2>EN 24 HORAS</h2>
-        <p>
-          Ayudo a creadores como tú a usar la IA con propósito.
-          <strong> La clave es hacer que trabaje para ti, hoy.</strong>
-        </p>
+      <div className="hero-inner">
+        <img
+          src={heroImg}
+          alt="Lukas IA coach"
+          className="hero-img-sobrepuesta"
+        />
 
-        <form ref={formRef} onSubmit={handleSubmit} className="formulario-lead">
-          <input name="name" type="text" placeholder="Tu nombre" required />
-          <input
-            name="email"
-            type="email"
-            placeholder="Correo electrónico"
-            required
-          />
-          <input name="whats" type="tel" placeholder="WhatsApp (opcional)" />
+        <div className="hero-texto-solo">
+          <h1>
+            <span>DOMINA</span> LA IA
+          </h1>
+          <h2>EN 24 HORAS</h2>
+          <p>
+            “Haz que la IA trabaje para ti en solo 24 horas <br />
+            <strong>– sin tecnicismos.</strong>”
+          </p>
 
-          <button type="submit" disabled={sending}>
-            {sending ? "Enviando…" : "📥 Descargar los 7 Prompts GRATIS"}
-          </button>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="formulario-lead"
+          >
+            <input name="name" type="text" placeholder="Tu nombre" required />
+            <input
+              name="email"
+              type="email"
+              placeholder="Correo electrónico"
+              required
+            />
+            <input name="whats" type="tel" placeholder="WhatsApp (opcional)" />
 
-          {error && <small className="error">{error}</small>}
-          <small>Sin spam. Solo el recurso y un bonus semanal.</small>
-        </form>
+            <button type="submit" disabled={sending} className="btn-neon-pulse">
+              {sending ? "Enviando…" : "📥 Descargar los 7 Prompts GRATIS"}
+            </button>
+
+            {error && <small className="error">{error}</small>}
+            <small>Sin spam. Solo el recurso y un bonus semanal.</small>
+          </form>
+        </div>
       </div>
 
-      {/* --- MODAL MEJORADO --- */}
-      {/* --- MODAL MEJORADO --- */}
       {showOk && (
         <div className="modal-overlay" onClick={() => setShowOk(false)}>
           <div className="modal-box" onClick={(e) => e.stopPropagation()}>
@@ -86,7 +93,6 @@ export default function Hero() {
             <p>Revisa tu bandeja de entrada (o spam) y descarga el PDF.</p>
             <p>Cada viernes recibirás un prompt exclusivo en tu correo.</p>
 
-            {/* CTA multiplataforma */}
             <div className="bonus">
               <p>
                 🎁 <strong>¿Quieres más?</strong> Únete a mis canales y
@@ -94,7 +100,7 @@ export default function Hero() {
               </p>
 
               <a
-                href="https://wa.me/message/C5INQAF6YAEAC1" // Reemplaza por tu enlace real
+                href="https://wa.me/message/C5INQAF6YAEAC1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-canal telegram"
@@ -103,7 +109,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://wa.me/573150399322" // Número real en formato internacional
+                href="https://wa.me/573150399322"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-canal whatsapp"
@@ -112,7 +118,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://www.instagram.com/lukasprompt/" // Tu usuario de Instagram
+                href="https://www.instagram.com/lukasprompt/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-canal instagram"

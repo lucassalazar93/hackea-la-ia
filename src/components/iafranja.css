@@ -1,58 +1,59 @@
-/* Contenedor principal */
+/* —— CONTENEDOR PRINCIPAL —— */
 .ia-franja-container {
   width: 100%;
   overflow: hidden;
   background: linear-gradient(to right, #0f0f0f, #111111);
-  border-top: 2px solid #facc15;
-  border-bottom: 2px solid #facc15;
+  border-top: 2px solid #ffd54f;
+  border-bottom: 2px solid #ffd54f;
   padding: 10px 0;
   position: relative;
   z-index: 2;
 }
 
-/* Wrapper con no-break para el scroll continuo */
+/* —— CONTENEDOR DE DESPLAZAMIENTO —— */
 .ia-franja-wrapper {
   white-space: nowrap;
   display: flex;
   align-items: center;
 }
 
-/* Pista animada que se desplaza */
+/* —— PISTA ANIMADA —— */
 .ia-franja-track {
   display: inline-block;
-  animation: scrollFranja 95s linear infinite;
+  animation: scrollLeft 150s linear infinite;
 }
 
-/* Ítem individual dentro de la franja */
+/* —— ANIMACIÓN HORIZONTAL INFINITA —— */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* —— ÍTEMS DE MENSAJE —— */
 .ia-franja-item {
   display: inline-block;
+  padding: 0.4rem 1rem;
   font-size: 1rem;
-  font-weight: 500;
-  color: #facc15;
   font-family: "Sora", sans-serif;
-  padding: 0 1rem;
+  color: #facc15;
+  font-weight: 500;
   letter-spacing: 0.5px;
   text-shadow: 0 0 8px rgba(250, 204, 21, 0.5);
+  white-space: nowrap;
 }
 
-/* Efecto neón y fuerza de brillo */
+/* —— ESTILO DESTACADO —— */
 .ia-franja-item strong {
   font-weight: 700;
-  color: #ffffffc7;
-  text-shadow: 0 0 5px #facc15dd, 0 0 10px #facc15ba;
+  color: #ffffffdd;
+  text-shadow: 0 0 5px #facc15dd, 0 0 10px #facc15aa;
 }
 
-/* Animación infinita y suave */
-@keyframes scrollFranja {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Estilos para enlaces dentro de la franja */
+/* —— ENLACES DENTRO DE LA FRANJA —— */
 .ia-franja-item a {
   color: #facc15;
   font-weight: 600;
@@ -62,6 +63,64 @@
 
 .ia-franja-item a:hover {
   color: #ff5e00;
-  text-decoration: underline;
   text-shadow: 0 0 10px #ff5e00;
+  text-decoration: underline;
+}
+
+/* —— COLORES PARA ICONOS O EMOJIS —— */
+.icon-gold {
+  color: #ffd700;
+}
+.icon-cyan {
+  color: #00d8ff;
+}
+.icon-rose {
+  color: #e96479;
+}
+.icon-green {
+  color: #43e97b;
+}
+.icon-orange {
+  color: #ff6b00;
+}
+.icon-pink {
+  color: #ff3cac;
+}
+
+/* —— LINK DE INSTAGRAM —— */
+.ig-link {
+  color: #ffd54f;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.ig-link:hover {
+  opacity: 0.7;
+}
+
+.ig-icon {
+  vertical-align: -2px;
+}
+
+/* —— RESPONSIVE —— */
+@media (max-width: 768px) {
+  .ia-franja-item {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.75rem;
+  }
+
+  .ia-franja-track {
+    animation-duration: 120s;
+  }
+}
+
+@media (max-width: 480px) {
+  .ia-franja-item {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .ia-franja-track {
+    animation-duration: 100s;
+  }
 }

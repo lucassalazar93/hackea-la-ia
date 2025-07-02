@@ -169,3 +169,57 @@
     height: 130px;
   }
 }
+
+/* —— Variables de color (opcional, ajústalas a tu paleta) —— */
+:root {
+  --neon-bg: #ff7a00; /* color base del botón  */
+  --neon-glow: #ffa94d; /* tono del resplandor    */
+  --neon-text: #ffffff; /* color del texto        */
+}
+
+/* —— Botón con palpito + glow ——————————————————— */
+.btn-neon-pulse {
+  position: relative;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  color: var(--neon-text);
+  background: var(--neon-bg);
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+
+  /* Animación de palpito + glow */
+  animation: pulseGlow 2.4s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.45), 0 0 24px rgba(255, 122, 0, 0.25);
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(255, 122, 0, 0.35), 0 0 16px rgba(255, 122, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05); /* “palpito”         */
+    box-shadow: 0 0 10px rgba(255, 122, 0, 0.55),
+      0 0 32px rgba(255, 122, 0, 0.35); /* glow más fuerte */
+  }
+}
+
+/* —— Estado hover (aún más luminoso) ——————————— */
+.btn-neon-pulse:hover:not(:disabled) {
+  transform: scale(1.07);
+  box-shadow: 0 0 12px rgba(255, 221, 0, 0.811),
+    0 0 40px rgba(255, 122, 0, 0.45);
+}
+
+/* —— Estado disabled (sin animaciones) ————————— */
+.btn-neon-pulse:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  animation: none;
+  box-shadow: none;
+  transform: none;
+}
