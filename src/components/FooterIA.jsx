@@ -1,7 +1,7 @@
 // src/components/FooterIA.jsx
 import React from "react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
-import "./footerIA.css";
+import "./FooterIA.css"; // ✔️ coincide con el nombre real del arc
 
 export default function FooterIA() {
   return (
