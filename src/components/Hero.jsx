@@ -92,7 +92,6 @@ export default function Hero() {
             <h3>🎉 ¡Recurso enviado!</h3>
             <p>Revisa tu bandeja de entrada (o spam) y descarga el PDF.</p>
             <p>Cada viernes recibirás un prompt exclusivo en tu correo.</p>
-
             <div className="bonus">
               <p>
                 🎁 <strong>¿Quieres más?</strong> Únete a mis canales y
@@ -130,11 +129,10 @@ export default function Hero() {
                 ⏳ Solo disponible esta semana para nuevos suscriptores.
               </p>
             </div>
-
             <p className="social-proof">
               ✅ Ya somos +420 creadores usando IA con propósito.
             </p>
-
+            // ajuste visual móvil
             <button className="modal-btn" onClick={() => setShowOk(false)}>
               Cerrar
             </button>
